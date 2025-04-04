@@ -20,7 +20,7 @@ resource "aws_security_group" "webapp_http_inbound_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  vpc_id = data.tfe_outputs.networking.nonsensitive_values.billing_code
+  vpc_id = data.tfe_outputs.networking.nonsensitive_values.public_subnets
 
 
   tags = local.common_tags
@@ -37,7 +37,7 @@ resource "aws_security_group" "webapp_ssh_inbound_sg" {
     cidr_blocks = [var.ip_range]
   }
 
-  vpc_id = data.tfe_outputs.networking.nonsensitive_values.billing_code
+  vpc_id = data.tfe_outputs.networking.nonsensitive_values.public_subnets
 
 
   tags = local.common_tags
@@ -54,7 +54,7 @@ resource "aws_security_group" "webapp_outbound_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  vpc_id = data.tfe_outputs.networking.nonsensitive_values.billing_code
+  vpc_id = data.tfe_outputs.networking.nonsensitive_values.public_subnets
 
 
   tags = local.common_tags
