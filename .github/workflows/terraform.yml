@@ -42,7 +42,3 @@ jobs:
       id: validate
       if: (success() || failure())
       run: terraform validate
-
-    - name: Print Terraform Non-sensitive value
-      id: console
-      run: terraform console
