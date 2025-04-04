@@ -6,7 +6,7 @@ variable "region" {
 }
 
 variable "test" {
-  type = string
+  type        = string
   description = "test"
 }
 
@@ -52,4 +52,13 @@ variable "vpc_id" {
   description = "(Required) VPC ID of VPC for application deployment."
 }
 
+variable "tfe_organization" {
+  type        = string
+  description = "(Required) Name of organization "
+}
+
+variable "tfe_workspace_name" {
+  type        = string
+  description = "(Required) Name  of workspace use to get information"
+}
 
