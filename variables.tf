@@ -5,6 +5,11 @@ variable "region" {
   default     = "us-east-1"
 }
 
+variable "test" {
+  type = string
+  description = "test"
+}
+
 variable "prefix" {
   type        = string
   description = "(Required) Prefix to use for all resources in this module."
