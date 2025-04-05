@@ -6,7 +6,7 @@ variable "region" {
 }
 
 variable "test" {
-  type = string
+  type        = string
   description = "test"
 }
 
@@ -52,4 +52,7 @@ variable "vpc_id" {
   description = "(Required) VPC ID of VPC for application deployment."
 }
 
-
+variable "playbook_repository" {
+  type        = string
+  description = "(Required) Playbook ansible to configure app after deployment"
+}
